@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="\">
+    Ravenclaw</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Sobre Nosotres</a>
+        {% if session.logeado_C %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logoutClientes">Cerrar Sesión</a>
+        </li>
+         {% else %}
+         <li class="nav-item">
+           <a class="nav-link" href="/cliente">Clientes</a>
+         </li>
+        {% endif %}
+        {% if session.logeado_E %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logoutEmpleados">Cerrar Sesión</a>
+        </li>
+         {% else %}
+         <li class="nav-item">
+           <a class="nav-link" href="/admin">Empleades</a>
+         </li>
+          {% endif %}
+      <!-- <form class="form-inline my-2 my-lg-0" >
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
